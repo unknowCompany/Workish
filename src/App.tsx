@@ -1,0 +1,64 @@
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Technology from './components/Technology';
+import Benefits from './components/Benefits';
+import CTA from './components/CTA';
+import Footer from './components/Footer';
+import './styles/globals.css';
+
+function App() {
+  useEffect(() => {
+    // Smooth scrolling parallax effect
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const parallaxElements = document.querySelectorAll('.parallax-slow');
+      
+      parallaxElements.forEach((element) => {
+        const speed = 0.5;
+        const yPos = -(scrollY * speed);
+        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+      });
+    };
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '50px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black">
+      <Navbar />
+      <Hero />
+      <Services />
+      <Technology />
+      <Benefits />
+      <CTA />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
