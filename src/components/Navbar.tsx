@@ -61,6 +61,12 @@ const Navbar: React.FC = () => {
               Benefits
             </button>
             <button 
+              onClick={() => scrollToSection('team')}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+            >
+              Team
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
             >
@@ -114,6 +120,12 @@ const Navbar: React.FC = () => {
               className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
             >
               Benefits
+            </button>
+            <button 
+              onClick={() => scrollToSection('team')}
+              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
+            >
+              Team
             </button>
             <button 
               onClick={() => scrollToSection('contact')}

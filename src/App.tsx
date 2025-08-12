@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Technology from './components/Technology';
 import Benefits from './components/Benefits';
+import Team from './components/Team';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import './styles/globals.css';
@@ -55,6 +56,7 @@ function App() {
       <Services />
       <Technology />
       <Benefits />
+      <Team />
       <CTA />
       <Footer />
     </div>
