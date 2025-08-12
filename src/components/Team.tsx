@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Twitter, Github } from 'lucide-react';
+import {Github, Link } from 'lucide-react';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -9,18 +9,19 @@ const Team: React.FC = () => {
       bio: "Former VP of Engineering at Stripe. 10+ years building scalable fintech solutions.",
       image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       social: {
-        linkedin: "#",
+        portfolio: "#",
         twitter: "#"
       }
     },
     {
-      name: "Marcus Rodriguez",
+      name: "Mr.Phukrit Kittinontana",
       role: "CTO & Co-Founder",
-      bio: "AI/ML expert with PhD from Stanford. Previously led engineering teams at Google and Tesla.",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      bio: "Innovative AI/ML expert and technology leader, known for pioneering solutions that transform industries. PhD from DII CAMT CMU.",
+      image: "https://avatars.githubusercontent.com/u/188324414?s=400&u=c8f6123baa34b9b35e1837724544f7782798a52a&v=4",
       social: {
-        linkedin: "#",
-        github: "#"
+
+        github: "https://github.com/phukrit7171/",
+        portfolio: "https://phukrit7171.github.io/phukrit7171/"
       }
     },
     {
@@ -29,7 +30,7 @@ const Team: React.FC = () => {
       bio: "Product strategy leader with 8+ years at Amazon and Shopify. Expert in e-commerce solutions.",
       image: "https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       social: {
-        linkedin: "#",
+        portfolio: "#",
         twitter: "#"
       }
     },
@@ -39,7 +40,7 @@ const Team: React.FC = () => {
       bio: "Full-stack architect specializing in distributed systems and real-time analytics platforms.",
       image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       social: {
-        linkedin: "#",
+        portfolio: "#",
         github: "#"
       }
     },
@@ -49,7 +50,7 @@ const Team: React.FC = () => {
       bio: "B2B sales veteran with proven track record scaling SaaS companies from startup to IPO.",
       image: "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       social: {
-        linkedin: "#",
+        portfolio: "#",
         twitter: "#"
       }
     },
@@ -59,7 +60,7 @@ const Team: React.FC = () => {
       bio: "Machine learning researcher focused on automation and predictive analytics for retail.",
       image: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       social: {
-        linkedin: "#",
+        portfolio: "#",
         github: "#"
       }
     }
@@ -119,12 +120,12 @@ const Team: React.FC = () => {
 
               {/* Social Links */}
               <div className="flex justify-center space-x-4">
-                {member.social.linkedin && (
+                {member.social.portfolio && (
                   <a 
-                    href={member.social.linkedin}
+                    href={member.social.portfolio}
                     className="w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group/social"
                   >
-                    <Linkedin size={18} className="text-gray-400 group-hover/social:text-cyan-400" />
+                    <Link size={18} className="text-gray-400 group-hover/social:text-cyan-400" />
                   </a>
                 )}
                 {member.social.twitter && (
@@ -132,7 +133,7 @@ const Team: React.FC = () => {
                     href={member.social.twitter}
                     className="w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 group/social"
                   >
-                    <Twitter size={18} className="text-gray-400 group-hover/social:text-cyan-400" />
+                    <Github size={18} className="text-gray-400 group-hover/social:text-cyan-400" />
                   </a>
                 )}
                 {member.social.github && (

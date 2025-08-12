@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'glass-card backdrop-blur-xl bg-black/20 border-b border-white/10' 
+        ? 'glass-card backdrop-blur-xl bg-black/20' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
@@ -44,31 +44,31 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium nav-link"
             >
               Solutions
             </button>
             <button 
               onClick={() => scrollToSection('technology')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium nav-link"
             >
               Technology
             </button>
             <button 
               onClick={() => scrollToSection('benefits')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium nav-link"
             >
               Benefits
             </button>
             <button 
               onClick={() => scrollToSection('team')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium nav-link"
             >
               Team
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium nav-link"
             >
               Contact
             </button>
@@ -98,52 +98,52 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-500 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="glass-card rounded-2xl mt-4 p-6 space-y-4">
-            <button 
-              onClick={() => scrollToSection('services')}
-              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-            >
-              Solutions
-            </button>
-            <button 
-              onClick={() => scrollToSection('technology')}
-              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-            >
-              Technology
-            </button>
-            <button 
-              onClick={() => scrollToSection('benefits')}
-              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-            >
-              Benefits
-            </button>
-            <button 
-              onClick={() => scrollToSection('team')}
-              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-            >
-              Team
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
-            >
-              Contact
-            </button>
-            <div className="pt-4 border-t border-white/10">
+          {/* Mobile Menu */}
+          <div className={`md:hidden transition-all duration-500 overflow-hidden ${
+            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
+            <div className="glass-card rounded-2xl mt-4 p-6 space-y-4">
               <button 
-                onClick={() => scrollToSection('cta')}
-                className="btn-primary w-full text-sm px-6 py-3 group"
+                onClick={() => scrollToSection('services')}
+                className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
               >
-                Get Started
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                Solutions
               </button>
+              <button 
+                onClick={() => scrollToSection('technology')}
+                className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
+              >
+                Technology
+              </button>
+              <button 
+                onClick={() => scrollToSection('benefits')}
+                className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
+              >
+                Benefits
+              </button>
+              <button 
+                onClick={() => scrollToSection('team')}
+                className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
+              >
+                Team
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
+              >
+                Contact
+              </button>
+              <div className="pt-4 border-t border-white/10">
+                <button 
+                  onClick={() => scrollToSection('cta')}
+                  className="btn-primary w-full text-sm px-6 py-3 group"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                </button>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </nav>
   );

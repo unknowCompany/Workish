@@ -119,12 +119,34 @@
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+  position: relative;
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, #00B8E6 0%, #2563EB 100%);
   box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4);
   transform: translateY(-2px);
+}
+
+/* Navbar link with line animation */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00D4FF, #3B82F6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .btn-secondary {

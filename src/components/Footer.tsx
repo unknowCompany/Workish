@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               Revolutionizing business operations with intelligent automation and cutting-edge technology solutions.
             </p>
             <div className="flex space-x-4">
-              {[Twitter, Linkedin, Github].map((Icon, index) => (
+              {[Linkedin, Github].map((Icon, index) => (
                 <a 
                   key={index}
                   href="#" 
