@@ -30,7 +30,7 @@ const Team: React.FC = () => {
       bio: "Head of the Development team at this company for over 8 years, dedicated to building high-quality solutions that meet client needs.",
       image: "https://avatars.githubusercontent.com/u/188391456?v=4",
       social: {
-        portfolio: "#",
+        portfolio: "https://momoekub.github.io/Portfolio/",
         github: "https://github.com/Momoekub"
       }
     },
