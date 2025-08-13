@@ -45,13 +45,13 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "Lisa Thompson",
-      role: "Head of Sales",
-      bio: "B2B sales veteran with proven track record scaling SaaS companies from startup to IPO.",
-      image: "https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Ms.Nattharin Arnatthanankul",
+      role: "Front-End Developer",
+      bio: "Front-End Developer creating responsive and user-friendly web experiences.",
+      image: "https://avatars.githubusercontent.com/u/196073644?v=4",
       social: {
-        portfolio: "#",
-        twitter: "#"
+        portfolio: "https://pin-nattharin.github.io/portfolio/",
+        github: "https://github.com/pin-nattharin"
       }
     },
     {
