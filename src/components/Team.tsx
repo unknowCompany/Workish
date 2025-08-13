@@ -25,13 +25,13 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "Emily Watson",
-      role: "Head of Product",
-      bio: "Product strategy leader with 8+ years at Amazon and Shopify. Expert in e-commerce solutions.",
-      image: "https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Mr.Mothana Laohatangsakul",
+      role: "Head of Head of Development",
+      bio: "Head of the Development team at this company for over 8 years, dedicated to building high-quality solutions that meet client needs.",
+      image: "https://avatars.githubusercontent.com/u/188391456?v=4",
       social: {
         portfolio: "#",
-        twitter: "#"
+        github: "https://github.com/Momoekub"
       }
     },
     {
