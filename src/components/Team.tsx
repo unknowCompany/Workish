@@ -55,13 +55,13 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "Alex Johnson",
-      role: "Lead AI Engineer",
-      bio: "Machine learning researcher focused on automation and predictive analytics for retail.",
-      image: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Mr.Photsawee Tantiwattanachaikul",
+      role: "UX/UI Designer",
+      bio: "UX/UI Designer focused on creating simple, user-friendly designs that improve digital experiences.",
+      image: "https://avatars.githubusercontent.com/u/220499250?v=4",
       social: {
-        portfolio: "#",
-        github: "#"
+        portfolio: "https://mphotsawee.github.io/Portfolio/",
+        github: "https://github.com/Mphotsawee"
       }
     }
   ];
