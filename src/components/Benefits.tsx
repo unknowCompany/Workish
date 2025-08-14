@@ -92,26 +92,31 @@ const Benefits: React.FC = () => {
 
   return (
     <section id="benefits" className="py-20 md:py-40 px-4 md:px-6 bg-gradient-to-b from-gray-800 via-gray-900 to-black relative overflow-hidden">
-      {/* Enhanced Background Elements */}
+      {/* Enhanced Background Elements with Parallax */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Main gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+        {/* Main gradient orbs with parallax */}
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse parallax-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000 parallax-medium"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse delay-500 parallax-fast"></div>
         
-        {/* Additional floating elements */}
-        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-gradient-to-br from-emerald-500/8 to-teal-500/8 rounded-full blur-3xl animate-pulse delay-1500"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-[250px] h-[250px] bg-gradient-to-br from-orange-500/8 to-red-500/8 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        {/* Additional floating elements with parallax */}
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-gradient-to-br from-emerald-500/8 to-teal-500/8 rounded-full blur-3xl animate-pulse delay-1500 parallax-slow"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-[250px] h-[250px] bg-gradient-to-br from-orange-500/8 to-red-500/8 rounded-full blur-3xl animate-pulse delay-2000 parallax-medium"></div>
         
-        {/* Floating particles */}
-        <div className="absolute top-20 left-20 w-3 h-3 bg-cyan-400 rounded-full animate-float opacity-70 shadow-lg shadow-cyan-400/50"></div>
-        <div className="absolute top-40 right-32 w-2 h-2 bg-blue-400 rounded-full animate-float delay-1000 opacity-60 shadow-lg shadow-blue-400/50"></div>
-        <div className="absolute bottom-32 left-1/3 w-2.5 h-2.5 bg-purple-400 rounded-full animate-float delay-2000 opacity-80 shadow-lg shadow-purple-400/50"></div>
-        <div className="absolute bottom-20 right-20 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-float delay-3000 opacity-50 shadow-lg shadow-emerald-400/50"></div>
+        {/* Floating particles with parallax */}
+        <div className="absolute top-20 left-20 w-3 h-3 bg-cyan-400 rounded-full animate-float opacity-70 shadow-lg shadow-cyan-400/50 parallax-fast"></div>
+        <div className="absolute top-40 right-32 w-2 h-2 bg-blue-400 rounded-full animate-float delay-1000 opacity-60 shadow-lg shadow-blue-400/50 parallax-medium"></div>
+        <div className="absolute bottom-32 left-1/3 w-2.5 h-2.5 bg-purple-400 rounded-full animate-float delay-2000 opacity-80 shadow-lg shadow-purple-400/50 parallax-slow"></div>
+        <div className="absolute bottom-20 right-20 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-float delay-3000 opacity-50 shadow-lg shadow-emerald-400/50 parallax-fast"></div>
         
-        {/* Animated lines */}
-        <div className="absolute top-1/4 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-px h-24 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent animate-pulse delay-1000"></div>
+        {/* Animated lines with parallax */}
+        <div className="absolute top-1/4 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent animate-pulse parallax-medium"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-px h-24 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent animate-pulse delay-1000 parallax-slow"></div>
+        
+        {/* Additional parallax elements */}
+        <div className="absolute top-1/6 left-1/6 w-4 h-4 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full animate-float delay-500 parallax-fast"></div>
+        <div className="absolute bottom-1/6 right-1/6 w-3 h-3 bg-gradient-to-r from-purple-400/12 to-pink-400/12 rounded-full animate-float delay-1500 parallax-medium"></div>
+        <div className="absolute top-2/3 left-1/3 w-2 h-2 bg-gradient-to-r from-emerald-400/10 to-teal-400/10 rounded-full animate-float delay-2500 parallax-slow"></div>
       </div>
 
       {/* Enhanced Background Pattern */}

@@ -22,29 +22,34 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-gray-900 to-gray-800">
-      {/* Enhanced Animated Background */}
+      {/* Enhanced Animated Background with Parallax */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Main gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[150px] h-[150px] md:w-[300px] md:h-[300px] bg-gradient-to-br from-cyan-500/10 to-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-3/4 left-1/2 w-[120px] h-[120px] md:w-[250px] md:h-[250px] bg-gradient-to-br from-indigo-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        {/* Main gradient orbs with parallax */}
+        <div className="absolute top-1/4 left-1/4 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse parallax-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[150px] h-[150px] md:w-[300px] md:h-[300px] bg-gradient-to-br from-cyan-500/10 to-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000 parallax-medium"></div>
+        <div className="absolute top-3/4 left-1/2 w-[120px] h-[120px] md:w-[250px] md:h-[250px] bg-gradient-to-br from-indigo-500/8 to-purple-500/8 rounded-full blur-3xl animate-pulse delay-2000 parallax-fast"></div>
         
-        {/* Additional floating elements */}
-        <div className="absolute top-1/3 right-1/3 w-[100px] h-[100px] md:w-[200px] md:h-[200px] bg-gradient-to-br from-emerald-500/6 to-teal-500/6 rounded-full blur-3xl animate-pulse delay-1500"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-[80px] h-[80px] md:w-[180px] md:h-[180px] bg-gradient-to-br from-orange-500/6 to-red-500/6 rounded-full blur-3xl animate-pulse delay-3000"></div>
+        {/* Additional floating elements with parallax */}
+        <div className="absolute top-1/3 right-1/3 w-[100px] h-[100px] md:w-[200px] md:h-[200px] bg-gradient-to-br from-emerald-500/6 to-teal-500/6 rounded-full blur-3xl animate-pulse delay-1500 parallax-slow"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[80px] h-[80px] md:w-[180px] md:h-[180px] bg-gradient-to-br from-orange-500/6 to-red-500/6 rounded-full blur-3xl animate-pulse delay-3000 parallax-medium"></div>
         
-        {/* Floating particles */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60 shadow-lg shadow-cyan-400/40"></div>
-        <div className="absolute top-40 right-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float delay-1000 opacity-50 shadow-lg shadow-blue-400/40"></div>
-        <div className="absolute bottom-32 left-1/3 w-2 h-2 bg-purple-400 rounded-full animate-float delay-2000 opacity-70 shadow-lg shadow-purple-400/40"></div>
-        <div className="absolute bottom-20 right-20 w-1 h-1 bg-pink-400 rounded-full animate-float delay-3000 opacity-40 shadow-lg shadow-pink-400/40"></div>
-        <div className="absolute top-1/2 left-10 w-0.5 h-0.5 bg-emerald-400 rounded-full animate-float delay-500 opacity-30 shadow-lg shadow-emerald-400/40"></div>
-        <div className="absolute top-1/3 right-10 w-1.5 h-1.5 bg-orange-400 rounded-full animate-float delay-1500 opacity-50 shadow-lg shadow-orange-400/40"></div>
+        {/* Floating particles with parallax */}
+        <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60 shadow-lg shadow-cyan-400/40 parallax-fast"></div>
+        <div className="absolute top-40 right-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float delay-1000 opacity-50 shadow-lg shadow-blue-400/40 parallax-medium"></div>
+        <div className="absolute bottom-32 left-1/3 w-2 h-2 bg-purple-400 rounded-full animate-float delay-2000 opacity-70 shadow-lg shadow-purple-400/40 parallax-slow"></div>
+        <div className="absolute bottom-20 right-20 w-1 h-1 bg-pink-400 rounded-full animate-float delay-3000 opacity-40 shadow-lg shadow-pink-400/40 parallax-fast"></div>
+        <div className="absolute top-1/2 left-10 w-0.5 h-0.5 bg-emerald-400 rounded-full animate-float delay-500 opacity-30 shadow-lg shadow-emerald-400/40 parallax-medium"></div>
+        <div className="absolute top-1/3 right-10 w-1.5 h-1.5 bg-orange-400 rounded-full animate-float delay-1500 opacity-50 shadow-lg shadow-orange-400/40 parallax-slow"></div>
         
-        {/* Animated lines */}
-        <div className="absolute top-1/4 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-px h-16 bg-gradient-to-b from-transparent via-blue-400/20 to-transparent animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-px h-12 bg-gradient-to-b from-transparent via-purple-400/20 to-transparent animate-pulse delay-2000"></div>
+        {/* Animated lines with parallax */}
+        <div className="absolute top-1/4 left-1/2 w-px h-24 bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent animate-pulse parallax-medium"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-px h-16 bg-gradient-to-b from-transparent via-blue-400/20 to-transparent animate-pulse delay-1000 parallax-fast"></div>
+        <div className="absolute top-1/2 left-1/4 w-px h-12 bg-gradient-to-b from-transparent via-purple-400/20 to-transparent animate-pulse delay-2000 parallax-slow"></div>
+        
+        {/* Additional parallax elements */}
+        <div className="absolute top-1/6 left-1/6 w-4 h-4 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full animate-float delay-500 parallax-fast"></div>
+        <div className="absolute bottom-1/6 right-1/6 w-3 h-3 bg-gradient-to-r from-purple-400/12 to-pink-400/12 rounded-full animate-float delay-1500 parallax-medium"></div>
+        <div className="absolute top-2/3 left-1/3 w-2 h-2 bg-gradient-to-r from-emerald-400/10 to-teal-400/10 rounded-full animate-float delay-2500 parallax-slow"></div>
       </div>
 
               {/* Enhanced Parallax Grid */}

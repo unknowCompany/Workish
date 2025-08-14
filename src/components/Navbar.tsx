@@ -65,16 +65,37 @@ const Navbar: React.FC = () => {
         ? 'backdrop-blur-xl bg-black/30' 
         : 'bg-transparent'
     }`}>
+      {/* Parallax Background for Navbar */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating Elements */}
+        <div className="absolute top-2 left-1/4 w-3 h-3 bg-gradient-to-r from-cyan-400/5 to-blue-400/5 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-4 right-1/3 w-2 h-2 bg-gradient-to-r from-blue-400/4 to-purple-400/4 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-2 left-1/2 w-2.5 h-2.5 bg-gradient-to-r from-purple-400/3 to-cyan-400/3 rounded-full animate-float" style={{ animationDelay: '2.5s' }}></div>
+        
+        {/* Subtle Grid */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="grid grid-cols-12 gap-1 h-full">
+            {[...Array(12)].map((_, i) => (
+              <div key={i} className="border-t border-cyan-400/10 h-6 rounded-sm"></div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-24">
           {/* Enhanced Logo */}
           <div className="flex items-center">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="group flex items-center space-x-2"
+              className="group flex items-center space-x-2 relative"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-                <Sparkles size={20} className="text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 relative overflow-hidden">
+                {/* Parallax Elements for Logo */}
+                <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                  <div className="absolute top-1 left-1 w-1.5 h-1.5 bg-white/20 rounded-full animate-float" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="absolute bottom-1 right-1 w-1 h-1 bg-white/15 rounded-full animate-float" style={{ animationDelay: '1.2s' }}></div>
+                </div>
+                <Sparkles size={20} className="text-white relative z-10" />
               </div>
               <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 group-hover:scale-105 transition-transform duration-300">
                 Workish
@@ -130,6 +151,12 @@ const Navbar: React.FC = () => {
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
             
+            {/* Parallax Elements */}
+            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+              <div className="absolute top-1 left-1 w-2 h-2 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full animate-float" style={{ animationDelay: '0.3s' }}></div>
+              <div className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-gradient-to-r from-blue-400/8 to-purple-400/8 rounded-full animate-float" style={{ animationDelay: '1.3s' }}></div>
+            </div>
+            
             {isMobileMenuOpen ? (
               <X size={20} className="text-cyan-400 relative z-10 group-hover:scale-105 transition-transform duration-300" />
             ) : (
@@ -147,6 +174,26 @@ const Navbar: React.FC = () => {
           <div className={`p-4 md:p-6 space-y-1.5 relative overflow-hidden navbar-no-border rounded-2xl bg-gradient-to-r from-cyan-400/3 via-blue-400/3 to-purple-400/3 transition-all duration-500 ${
             isMobileMenuOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
           }`}>
+            
+            {/* Parallax Background Elements */}
+            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+              {/* Floating Orbs */}
+              <div className="absolute top-4 left-4 w-8 h-8 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
+              <div className="absolute top-8 right-6 w-6 h-6 bg-gradient-to-r from-blue-400/8 to-purple-400/8 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute bottom-6 left-6 w-4 h-4 bg-gradient-to-r from-purple-400/6 to-cyan-400/6 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Grid Pattern */}
+              <div className="absolute inset-0 opacity-5">
+                <div className="grid grid-cols-6 gap-2 h-full">
+                  {[...Array(24)].map((_, i) => (
+                    <div key={i} className="border-t border-cyan-400/20 h-4 rounded-sm"></div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/2 via-transparent to-blue-400/2"></div>
+            </div>
             
             <div className="relative z-10">
               {navItems.map((item, index) => (

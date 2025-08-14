@@ -130,6 +130,22 @@
   }
 }
 
+/* Parallax Effects */
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-medium {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-fast {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 /* Glassmorphism Components */
 .glass-card {
   background: rgba(255, 255, 255, 0.05);

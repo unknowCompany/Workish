@@ -17,13 +17,31 @@ function App() {
       if (!ticking) {
         requestAnimationFrame(() => {
           const scrollY = window.scrollY;
-          const parallaxElements = document.querySelectorAll('.parallax-slow');
           
-          parallaxElements.forEach((element) => {
-            const speed = 0.5;
+          // Parallax slow elements
+          const parallaxSlowElements = document.querySelectorAll('.parallax-slow');
+          parallaxSlowElements.forEach((element) => {
+            const speed = 0.3;
             const yPos = -(scrollY * speed);
             (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
           });
+          
+          // Parallax medium elements
+          const parallaxMediumElements = document.querySelectorAll('.parallax-medium');
+          parallaxMediumElements.forEach((element) => {
+            const speed = 0.6;
+            const yPos = -(scrollY * speed);
+            (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+          });
+          
+          // Parallax fast elements
+          const parallaxFastElements = document.querySelectorAll('.parallax-fast');
+          parallaxFastElements.forEach((element) => {
+            const speed = 0.9;
+            const yPos = -(scrollY * speed);
+            (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+          });
+          
           ticking = false;
         });
         ticking = true;
