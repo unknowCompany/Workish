@@ -4,13 +4,13 @@ import {Github, Link } from 'lucide-react';
 const Team: React.FC = () => {
   const teamMembers = [
     {
-      name: "Sarah Chen",
-      role: "CEO & Co-Founder",
-      bio: "Former VP of Engineering at Stripe. 10+ years building scalable fintech solutions.",
-      image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      name: "Mr.Thanathip Premnirandon",
+      role: "Full Stack Develop & UX/UI Designer",
+      bio: "A web developer with over 10 years of experience working in large organizations worldwide, focused on creating and designing websites.",
+      image: "https://avatars.githubusercontent.com/u/140483668?v=4",
       social: {
-        portfolio: "#",
-        twitter: "#"
+        portfolio: "https://oganesson018.github.io/my-portfolio/",
+        github: "https://github.com/oganesson018"
       }
     },
     {
