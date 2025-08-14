@@ -11,16 +11,23 @@ import './styles/globals.css';
 
 function App() {
   useEffect(() => {
-    // Smooth scrolling parallax effect
+    // Smooth scrolling parallax effect with throttling
+    let ticking = false;
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const parallaxElements = document.querySelectorAll('.parallax-slow');
-      
-      parallaxElements.forEach((element) => {
-        const speed = 0.5;
-        const yPos = -(scrollY * speed);
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
-      });
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const parallaxElements = document.querySelectorAll('.parallax-slow');
+          
+          parallaxElements.forEach((element) => {
+            const speed = 0.5;
+            const yPos = -(scrollY * speed);
+            (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     // Intersection Observer for scroll animations

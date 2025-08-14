@@ -1,83 +1,252 @@
-import React from 'react';
-import { CreditCard, TrendingUp, Truck } from 'lucide-react';
+import React, { useState } from 'react';
+import { CreditCard, TrendingUp, Truck, Zap, Shield, Globe, BarChart3, Users, ArrowRight, Sparkles, CheckCircle, Star } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
     {
       icon: CreditCard,
       title: "Intelligent PoS System",
+      subtitle: "Smart Point of Sale",
       description: "Smart, fast, and user-friendly Point of Sale system that adapts to your business needs with real-time analytics and seamless integrations.",
-      features: ["Real-time Analytics", "Multi-platform Support", "Secure Payments", "Inventory Sync"]
+      features: ["Real-time Analytics", "Multi-platform Support", "Secure Payments", "Inventory Sync", "Customer Insights", "Mobile Ready"],
+      color: "cyan",
+      stats: "99.9% Uptime",
+      badge: "Most Popular"
     },
     {
       icon: TrendingUp,
       title: "Automated Sales Management",
+      subtitle: "AI-Powered Sales",
       description: "Revolutionary platform that automates your entire sales funnel, inventory management, and customer relations with intelligent insights.",
-      features: ["Sales Automation", "CRM Integration", "Inventory Control", "Customer Insights"]
+      features: ["Sales Automation", "CRM Integration", "Inventory Control", "Customer Insights", "Predictive Analytics", "Multi-channel"],
+      color: "blue",
+      stats: "500% ROI",
+      badge: "Best Seller"
     },
     {
       icon: Truck,
       title: "Hi-Tech Logistics Management",
+      subtitle: "Smart Supply Chain",
       description: "Advanced logistics and supply chain solution powered by AI bots for ultimate efficiency and real-time tracking capabilities.",
-      features: ["AI-Powered Routing", "Real-time Tracking", "Supply Chain Optimization", "Predictive Analytics"]
+      features: ["AI-Powered Routing", "Real-time Tracking", "Supply Chain Optimization", "Predictive Analytics", "Global Coverage", "Cost Reduction"],
+      color: "purple",
+      stats: "60% Faster",
+      badge: "New Release"
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    switch (color) {
+      case 'cyan':
+        return {
+          gradient: 'from-cyan-400 to-blue-400',
+          bg: 'from-cyan-400/20 to-blue-400/20',
+          text: 'text-cyan-400',
+          border: 'border-cyan-400/30',
+          hover: 'hover:from-cyan-400/30 hover:to-blue-400/30'
+        };
+      case 'blue':
+        return {
+          gradient: 'from-blue-400 to-purple-400',
+          bg: 'from-blue-400/20 to-purple-400/20',
+          text: 'text-blue-400',
+          border: 'border-blue-400/30',
+          hover: 'hover:from-blue-400/30 hover:to-purple-400/30'
+        };
+      case 'purple':
+        return {
+          gradient: 'from-purple-400 to-pink-400',
+          bg: 'from-purple-400/20 to-pink-400/20',
+          text: 'text-purple-400',
+          border: 'border-purple-400/30',
+          hover: 'hover:from-purple-400/30 hover:to-pink-400/30'
+        };
+      default:
+        return {
+          gradient: 'from-cyan-400 to-blue-400',
+          bg: 'from-cyan-400/20 to-blue-400/20',
+          text: 'text-cyan-400',
+          border: 'border-cyan-400/30',
+          hover: 'hover:from-cyan-400/30 hover:to-blue-400/30'
+        };
+    }
+  };
+
   return (
-    <section id="services" className="py-24 px-6 bg-gradient-to-b from-black via-gray-900 to-gray-800 relative">
-      {/* Background Elements */}
+    <section id="services" className="py-40 px-6 bg-gradient-to-b from-gray-800 via-gray-900 to-black relative overflow-hidden">
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        {/* Main gradient orbs */}
+        <div className="absolute top-20 right-20 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-purple-500/8 to-pink-500/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+        
+        {/* Additional floating elements */}
+        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-gradient-to-br from-emerald-500/8 to-teal-500/8 rounded-full blur-3xl animate-pulse delay-1500"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-[250px] h-[250px] bg-gradient-to-br from-orange-500/8 to-red-500/8 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        
+        {/* Floating particles */}
+        <div className="absolute top-32 left-32 w-3 h-3 bg-cyan-400 rounded-full animate-float opacity-70 shadow-lg shadow-cyan-400/50"></div>
+        <div className="absolute top-48 right-40 w-2 h-2 bg-blue-400 rounded-full animate-float delay-1000 opacity-60 shadow-lg shadow-blue-400/50"></div>
+        <div className="absolute bottom-40 left-1/3 w-2.5 h-2.5 bg-purple-400 rounded-full animate-float delay-2000 opacity-80 shadow-lg shadow-purple-400/50"></div>
+        <div className="absolute bottom-32 right-32 w-1.5 h-1.5 bg-pink-400 rounded-full animate-float delay-3000 opacity-50 shadow-lg shadow-pink-400/50"></div>
+        
+        {/* Animated lines */}
+        <div className="absolute top-1/4 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-px h-24 bg-gradient-to-b from-transparent via-blue-400/30 to-transparent animate-pulse delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Solutions</span>
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-32 animate-fade-in-up">
+          {/* Decorative elements */}
+          <div className="flex justify-center items-center mb-8 space-x-4">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+            <div className="w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+          </div>
+          
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 animate-pulse">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Comprehensive business solutions designed to transform your operations and accelerate growth
           </p>
+          
+          {/* Stats */}
+          <div className="flex justify-center items-center space-x-8 mt-12">
+            <div className="flex items-center space-x-2 text-cyan-400">
+              <Zap size={24} />
+              <span className="text-lg font-semibold">Lightning Fast</span>
+            </div>
+            <div className="w-px h-6 bg-gray-600"></div>
+            <div className="flex items-center space-x-2 text-blue-400">
+              <Shield size={24} />
+              <span className="text-lg font-semibold">Enterprise Security</span>
+            </div>
+            <div className="w-px h-6 bg-gray-600"></div>
+            <div className="flex items-center space-x-2 text-purple-400">
+              <Globe size={24} />
+              <span className="text-lg font-semibold">Global Scale</span>
+            </div>
+          </div>
+          
+          <div className="flex justify-center items-center mt-8 space-x-4">
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+            <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+          </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="glass-card p-8 rounded-2xl group hover:scale-105 transition-all duration-500 animate-fade-in-up"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon size={32} className="text-cyan-400" />
+        {/* Enhanced Services Grid */}
+        <div className="grid md:grid-cols-3 gap-12">
+          {services.map((service, index) => {
+            const colors = getColorClasses(service.color);
+            return (
+              <div 
+                key={index} 
+                className="group relative"
+                style={{ animationDelay: `${index * 300}ms` }}
+              >
+                {/* Card Container */}
+                <div className="glass-card p-10 rounded-3xl group-hover:scale-105 transition-all duration-700 animate-fade-in-up relative overflow-hidden h-full">
+                  {/* Gradient Border Effect */}
+                  <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  {/* Badge */}
+                  <div className="absolute top-6 right-6 z-20">
+                    <div className={`flex items-center space-x-1 px-3 py-1 bg-gradient-to-r ${colors.bg} rounded-full border ${colors.border} backdrop-blur-sm`}>
+                      <Star size={12} className={colors.text} />
+                      <span className={`text-xs font-medium ${colors.text}`}>{service.badge}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Icon Container */}
+                  <div className="relative mb-8">
+                    <div className={`flex items-center justify-center w-20 h-20 bg-gradient-to-br ${colors.bg} rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-500 relative`}>
+                      <service.icon size={36} className={colors.text} />
+                      
+                      {/* Glow effect */}
+                      <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${colors.bg} blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    </div>
+                    
+                    {/* Stats Badge */}
+                    <div className="absolute -bottom-2 -right-2 w-16 h-8 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full border border-amber-400/30 backdrop-blur-sm flex items-center justify-center">
+                      <span className="text-xs font-bold text-amber-400">{service.stats}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    
+                    <p className={`text-sm font-medium ${colors.text} mb-4`}>
+                      {service.subtitle}
+                    </p>
+                    
+                    <p className="text-gray-300 mb-8 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="space-y-3 mb-8">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle size={16} className={`${colors.text} flex-shrink-0`} />
+                          <span className="text-gray-300 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="pt-6 border-t border-white/10">
+                      <button className={`${colors.text} hover:text-white font-semibold group-hover:translate-x-2 transition-all duration-300 flex items-center space-x-2`}>
+                        <span>Learn More</span>
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Enhanced CTA Section */}
+        <div className="mt-32 text-center animate-fade-in-up">
+          <div className="glass-card p-16 rounded-3xl max-w-4xl mx-auto relative overflow-hidden">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 via-blue-400/5 via-purple-400/5 to-pink-400/5 rounded-3xl"></div>
+            
+            {/* Floating elements */}
+            <div className="absolute top-8 left-8 w-4 h-4 bg-cyan-400/30 rounded-full animate-float"></div>
+            <div className="absolute top-12 right-12 w-3 h-3 bg-blue-400/30 rounded-full animate-float delay-1000"></div>
+            <div className="absolute bottom-8 left-12 w-2 h-2 bg-purple-400/30 rounded-full animate-float delay-2000"></div>
+            
+            <div className="relative z-10">
+              {/* Decorative line */}
+              <div className="flex justify-center items-center mb-8">
+                <div className="w-20 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+                <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full mx-4 animate-pulse"></div>
+                <div className="w-20 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
               </div>
               
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {service.title}
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Ready to Transform Your Business?
               </h3>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
+              <p className="text-gray-300 mb-10 text-xl leading-relaxed max-w-3xl mx-auto">
+                Join thousands of businesses that have already revolutionized their operations with our cutting-edge solutions.
               </p>
-
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="text-gray-400 text-sm flex items-center">
-                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <button className="text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-2 transition-all duration-300">
-                  Learn More →
-                </button>
-              </div>
+              
+              <button className="btn-primary text-xl px-12 py-6 rounded-3xl hover:scale-105 transition-transform duration-300 shadow-2xl shadow-cyan-400/25">
+                <Sparkles size={24} className="mr-3" />
+                Get Started Today
+              </button>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
