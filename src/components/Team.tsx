@@ -35,14 +35,15 @@ const Team: React.FC = () => {
       }
     },
     {
-      name: "David Kim",
+      name: "Mr.Kunanan Wongsing",
       role: "VP of Engineering",
       bio: "Full-stack architect specializing in distributed systems and real-time analytics platforms.",
-      image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "https://portfolio1-nine-ebon.vercel.app/me.jpg",
       social: {
-        portfolio: "#",
-        github: "#"
+        portfolio: "https://portfolio1-nine-ebon.vercel.app/",
+        github: "https://github.com/StellarBearX"
       }
+      
     },
     {
       name: "Ms.Nattharin Arnatthanankul",
