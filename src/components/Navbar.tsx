@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter] duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
-      isScrolled 
+      isScrolled || isMobileMenuOpen
         ? 'glass-card backdrop-blur-xl bg-black/20' 
         : 'bg-transparent'
     }`}>
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
           <div className={`md:hidden transition-[max-height,opacity] duration-500 cubic-bezier(0.4, 0, 0.2, 1) overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <div className="glass-card rounded-2xl mt-4 p-6 space-y-4">
+            <div className="glass-card rounded-2xl mt-4 mb-4 p-6 space-y-4">
               <button 
                 onClick={() => scrollToSection('services')}
                 className="block w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 nav-link"
