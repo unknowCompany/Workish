@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter] duration-500 cubic-bezier(0.4, 0, 0.2, 1) ${
       isScrolled 
         ? 'glass-card backdrop-blur-xl bg-black/20' 
         : 'bg-transparent'
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300"
+            className="md:hidden w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300 cubic-bezier(0.4, 0, 0.2, 1)"
           >
             {isMobileMenuOpen ? (
               <X size={20} className="text-cyan-400" />
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
         </div>
 
           {/* Mobile Menu */}
-          <div className={`md:hidden transition-all duration-500 overflow-hidden ${
+          <div className={`md:hidden transition-[max-height,opacity] duration-500 cubic-bezier(0.4, 0, 0.2, 1) overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}>
             <div className="glass-card rounded-2xl mt-4 p-6 space-y-4">
@@ -133,15 +133,6 @@ const Navbar: React.FC = () => {
               >
                 Contact
               </button>
-              <div className="pt-4 border-t border-white/10">
-                <button 
-                  onClick={() => scrollToSection('cta')}
-                  className="btn-primary w-full text-sm px-6 py-3 group"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
-                </button>
-              </div>
             </div>
           </div>
       </div>
