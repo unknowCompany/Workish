@@ -204,7 +204,7 @@ const Footer: React.FC = () => {
           
           <div className="mt-8 pt-8 border-t border-gray-800 text-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Workish. All rights reserved. | 
+              © 2025 Workish. All rights reserved. | 
               <span className="text-cyan-400 ml-1">Empowering businesses with intelligent automation</span>
             </p>
           </div>

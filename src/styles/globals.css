@@ -107,6 +107,29 @@
   }
 }
 
+/* Mobile Menu Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Glassmorphism Components */
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
@@ -125,6 +148,17 @@
     0 12px 40px rgba(0, 212, 255, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+}
+
+/* Navbar specific overrides */
+.navbar-no-border {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-no-border:hover {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Button Styles */

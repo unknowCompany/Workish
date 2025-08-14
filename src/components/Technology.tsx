@@ -92,7 +92,7 @@ const Technology: React.FC = () => {
   };
 
   return (
-    <section id="technology" className="py-40 px-6 bg-gradient-to-b from-black via-gray-900 to-gray-800 relative overflow-hidden">
+    <section id="technology" className="py-20 md:py-40 px-4 md:px-6 bg-gradient-to-b from-black via-gray-900 to-gray-800 relative overflow-hidden">
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Main gradient orbs */}
@@ -118,32 +118,32 @@ const Technology: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Section Header */}
-        <div className="text-center mb-32 animate-fade-in-up">
+        <div className="text-center mb-16 md:mb-32 animate-fade-in-up">
           {/* Decorative elements */}
-          <div className="flex justify-center items-center mb-8 space-x-4">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-            <div className="w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+          <div className="flex justify-center items-center mb-4 md:mb-8 space-x-2 md:space-x-4">
+            <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+            <div className="w-2 md:w-4 h-2 md:h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
+            <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-4 md:mb-8 leading-tight">
             Powered by
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 animate-pulse block mt-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 animate-pulse block mt-2 md:mt-4">
               AI & Automation
             </span>
           </h2>
           
-          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg md:text-2xl lg:text-3xl text-gray-300 max-w-3xl md:max-w-4xl mx-auto leading-relaxed mb-6 md:mb-8">
             Our cutting-edge AI bots and machine learning algorithms work tirelessly 
             to optimize your business processes, predict market trends, and automate 
             complex logistics operations.
           </p>
           
           {/* Dynamic Feature Display */}
-          <div className="flex justify-center items-center space-x-8 mt-12">
+          <div className="flex justify-center items-center space-x-4 md:space-x-8 mt-8 md:mt-12">
             <div className="flex items-center space-x-2 text-cyan-400">
-              <Sparkles size={24} />
-              <span className="text-lg font-semibold">{features[currentFeature]}</span>
+              <Sparkles size={18} className="md:w-6 md:h-6" />
+              <span className="text-sm md:text-lg font-semibold">{features[currentFeature]}</span>
             </div>
           </div>
           

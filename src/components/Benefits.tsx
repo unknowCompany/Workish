@@ -91,7 +91,7 @@ const Benefits: React.FC = () => {
   };
 
   return (
-    <section id="benefits" className="py-40 px-6 bg-gradient-to-b from-gray-800 via-gray-900 to-black relative overflow-hidden">
+    <section id="benefits" className="py-20 md:py-40 px-4 md:px-6 bg-gradient-to-b from-gray-800 via-gray-900 to-black relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Main gradient orbs */}
@@ -125,37 +125,37 @@ const Benefits: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Section Header */}
-        <div className="text-center mb-32 animate-fade-in-up">
+        <div className="text-center mb-16 md:mb-32 animate-fade-in-up">
           {/* Decorative elements */}
-          <div className="flex justify-center items-center mb-8 space-x-4">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-            <div className="w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+          <div className="flex justify-center items-center mb-4 md:mb-8 space-x-2 md:space-x-4">
+            <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+            <div className="w-2 md:w-4 h-2 md:h-4 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse"></div>
+            <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           </div>
           
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white mb-4 md:mb-8 leading-tight">
             Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 via-purple-400 to-pink-400 animate-pulse">Workish?</span>
           </h2>
           
-          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-lg md:text-2xl lg:text-3xl text-gray-300 max-w-3xl md:max-w-4xl mx-auto leading-relaxed mb-6 md:mb-8">
             Experience measurable results with our proven business solutions
           </p>
           
           {/* Stats */}
-          <div className="flex justify-center items-center space-x-8 mt-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-8 mt-8 md:mt-12">
             <div className="flex items-center space-x-2 text-cyan-400">
-              <Zap size={24} />
-              <span className="text-lg font-semibold">Lightning Fast</span>
+              <Zap size={18} className="md:w-6 md:h-6" />
+              <span className="text-sm md:text-lg font-semibold">Lightning Fast</span>
             </div>
-            <div className="w-px h-6 bg-gray-600"></div>
+            <div className="hidden sm:block w-px h-6 bg-gray-600"></div>
             <div className="flex items-center space-x-2 text-blue-400">
-              <Award size={24} />
-              <span className="text-lg font-semibold">Proven Results</span>
+              <Award size={18} className="md:w-6 md:h-6" />
+              <span className="text-sm md:text-lg font-semibold">Proven Results</span>
             </div>
-            <div className="w-px h-6 bg-gray-600"></div>
+            <div className="hidden sm:block w-px h-6 bg-gray-600"></div>
             <div className="flex items-center space-x-2 text-purple-400">
-              <Globe size={24} />
-              <span className="text-lg font-semibold">Global Scale</span>
+              <Globe size={18} className="md:w-6 md:h-6" />
+              <span className="text-sm md:text-lg font-semibold">Global Scale</span>
             </div>
           </div>
           
@@ -167,7 +167,7 @@ const Benefits: React.FC = () => {
         </div>
 
         {/* Enhanced Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
           {benefits.map((benefit, index) => {
             const colors = getColorClasses(benefit.color);
             return (
@@ -177,14 +177,14 @@ const Benefits: React.FC = () => {
                 style={{ animationDelay: `${index * 250}ms` }}
               >
                 {/* Card Container */}
-                <div className="glass-card p-8 rounded-3xl group-hover:scale-105 transition-all duration-700 animate-fade-in-up relative overflow-hidden h-full">
+                <div className="glass-card p-6 md:p-8 rounded-2xl md:rounded-3xl group-hover:scale-105 transition-all duration-700 animate-fade-in-up relative overflow-hidden h-full">
                   {/* Gradient Border Effect */}
                   <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
                   {/* Icon Container */}
-                  <div className="relative mb-8">
-                    <div className={`flex items-center justify-center w-16 h-16 bg-gradient-to-br ${colors.bg} rounded-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 relative`}>
-                      <benefit.icon size={32} className={colors.text} />
+                  <div className="relative mb-6 md:mb-8">
+                    <div className={`flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br ${colors.bg} rounded-xl md:rounded-2xl mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500 relative`}>
+                      <benefit.icon size={28} className={`${colors.text} md:w-8 md:h-8`} />
                       
                       {/* Glow effect */}
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colors.bg} blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -193,7 +193,7 @@ const Benefits: React.FC = () => {
 
                   {/* Content */}
                   <div className="relative z-10 text-center">
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className="text-lg md:text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {benefit.title}
                     </h3>
                     
